@@ -1,107 +1,169 @@
 * {
+	/*https://uniwebsidad.com/libros/css-avanzado/capitulo-2*/
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: border-box; /*https://developer.mozilla.org/es/docs/Web/CSS/box-sizing*/
 }
 
 body {
 	background-color: #fff;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	margin: 13px 30px 10px;
+	background-image: url(/img/Fondo-gato.colores.png);
 }
 
-.card {
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Rubik Beastly", cursive;
+	font-size: 55px;
+	font-weight: 400;
+	color: #c25b5e;
+	text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.content {
+	margin-top: 30px;
 	display: flex;
-	flex-direction: column;
-	background-color: #fdfafa;
-	max-width: 900px;
-	margin: 20px auto;
-	padding: 15px;
-	border: 1px solid #000;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.buttons-image-container {
+	/*ALL NEW*/
+	width: 70%; /*tiene ancho de 70% de su contenedor padre que tiene class="container"*/
+	padding: 10px 10px 5px;
 	border-radius: 10px;
+	border: 3px solid #721c20;
 }
 
 .buttons {
 	display: flex;
-	justify-content: space-between;
-	margin: 0 24px;
+	justify-content: center; /*new*/
+	gap: 100px; /*new*/
+	align-items: center;
 }
 
-#btn-start,
-#btn-reiniciar,
-#btn-grupos {
-	height: 26px;
-	font-weight: 600;
-	font-size: 15px;
-	border-radius: 5px;
-	border: 1px solid #b4b4b4;
-	width: 30%;
+.buttons button {
+	padding: 6px 10px;
+	font-size: 17px;
+	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	border-radius: 10px; /*new*/ /*era:border-radius: 10px 50px;*/
+	border: 2px solid #721c20;
 }
 
-#taskList {
+.form label {
+	font-size: 17px;
+}
+
+.form {
+	border-radius: 10px; /*new*/
+	border: 2px solid #721c20; /*new*/
+	padding: 4px 8px; /*new*/
+	background-color: #fff; /*new*/
+}
+
+.select {
+	font-size: 17px;
+	padding: 5px 1px 5px 5px;
+	border-radius: 10px;
+	border: 2px solid #721c20;
+	margin-right: 7px;
+}
+
+.number-of-groups {
+	margin-right: 7px;
+}
+
+.list-content {
+	width: 30%; /*tiene ancho de 30% de su contenedor padre que tiene class="container"*/
+	background-color: #eb898e;
+	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	border-radius: 14px;
+	border: 3px solid #721c20;
+	padding: 25px 30px 10px;
 	display: flex;
-	justify-content: space-between;
-	background-color: #f3d0d0;
-	height: 800px;
-	width: 800px;
-	margin: 20px auto;
-	border: 1px solid #b4b4b4;
-	border-radius: 7px;
-	padding: 20px;
+	flex-direction: column;
 }
 
-.lista {
-	list-style: none;
-	margin-bottom: 12px;
-	width: 200px;
+.lists {
+	/*ALL NEW*/
+	display: flex;
+	justify-content: space-evenly;
 }
+
+.list-title {
+	margin-bottom: 25px;
+	align-self: center; /*new*/
+}
+
+.list {
+	list-style: none; /*elimina las bolitas en una lista desordenada (ul) HTML*/
+	font-size: 18px;
+}
+
+.list.one {
+	/*NEW*/
+	margin-right: 8px;
+}
+
+.list.two {
+	/*NEW*/
+	margin-left: 8px;
+}
+
+.coder {
+	margin-bottom: 8px;
+}
+
+.image {
+	position: relative;
+	z-index: 799;
+}
+
+.image img {
+	width: 100%;
+}
+
+.ovillo {
+	width: 25px;
+}
+
+/*LISTA DE COLORES
+#c25b5e
+#a53439
+#721c20
+#a52a2a
+#e29899
+*/
 
 .answer {
+	/*border: #000 solid 1px;*/
+	width: 500px;
+	height: 440px;
+	padding: 10px;
+	position: absolute;
+	top: 11%;
+	left: 28%;
+	z-index: 800;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	background-color: #fff;
-	height: 700px;
-	width: 500px;
-	padding: 20px;
-	border-radius: 7px;
-}
 
-/*.nombre {
-	width: 200px;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 8px;
-}*/
-
-.eliminar {
-	padding: 2px;
 }
 
 .voluntaria {
 	color: #000;
 	text-align: center;
-	font-size: 20px;
+	font-size: 50px;
 	border: #000 2px dotted;
-	padding: 8px;
-	width: 60%;
-	margin: auto;
+	padding: 10px;
 }
 
 .grupo {
-	font-size: 16px;
-	border: rgb(226, 53, 53) 2px solid;
-	padding: 8px;
-}
-
-.coder {
-	margin-bottom: 6px;
-	display: flex;
-	justify-content: space-between;
-}
-
-.tachar {
-	text-decoration-line: line-through;
-	text-decoration-thickness: 2px;
-	text-decoration-color: #960909;
-	color: #960909;
+	font-size: 18px;
+	/*border: #000 2px dotted;
+	padding: 5px;
+	margin-bottom: 5px;
 }
